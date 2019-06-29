@@ -3,7 +3,7 @@ import axios from "axios";
 import './App.scss';
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
-// import { BrowserRouter as Router } from "react-router-dom";
+import { Route } from "react-router-dom";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -27,8 +27,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Route exact
+          path="/"
+        />
+        <Route exact
+          path="/add-smurf"
+          render={()=>
         <SmurfForm />
+          }
+        />
+        <Route exact
+          path="/smurfs"
+          render={()=>
         <Smurfs smurfs={this.state.smurfs} />
+        }
+        />
       </div>
     );
   }
