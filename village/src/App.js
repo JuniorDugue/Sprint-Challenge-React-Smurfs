@@ -32,7 +32,7 @@ class App extends Component {
           <NavLink to="/add-smurf" className="navlink">Add Smurfs</NavLink>
         </nav>
         <Route exact
-          path="/add-smurf"
+          path="/add-smurf:id"
           render={()=>
         <SmurfForm addSmurf={this.addSmurf} />
           }
