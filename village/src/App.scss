@@ -1,0 +1,28 @@
+@import "./index.scss";
+
+.App {
+  text-align: center;
+
+  .nav{
+    // border: $border;
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 0;
+
+    .navlink{
+      // border: $border;
+      padding-right: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      border-radius: $border-radius;
+      color: $black;
+      border-bottom: 3px solid $black;
+
+      &:hover{
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+}
